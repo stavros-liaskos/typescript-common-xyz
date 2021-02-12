@@ -3,3 +3,8 @@
 
 
 # typescript-common-xyz
+A shared typescript lib with common usecases.
+
+## Publish
+It uses [semantic-release](https://github.com/semantic-release/semantic-release) and [commitizen](https://github.com/commitizen/cz-cli) is hooked to commit.   
+New packages are published according to the commit messages ([link](https://github.com/semantic-release/semantic-release#commit-message-format)) when merging to `main` 
