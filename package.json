@@ -1,6 +1,6 @@
 {
   "name": "typescript-common-xyz",
-  "version": "1.0.6-beta",
+  "version": "1.0.0-beta",
   "description": "A node library with common functions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,6 +28,9 @@
     "branches": [
       "main"
     ]
+  },
+  "release": {
+    "branches": ["main"]
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
