@@ -1,0 +1,78 @@
+{
+  "name": "typescript-common-xyz",
+  "version": "1.0.6-beta",
+  "description": "A node library with common functions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "node",
+    "common",
+    "lib",
+    "library",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stavros-liaskos/node-common.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "lint": "eslint --fix --cache ./{src,__tests__}/**/**/*.ts*",
+    "test": "jest ./__tests__/**/*.test.ts",
+    "prettier": "prettier  --write ./{src,__tests__}/**/**/*.ts*",
+    "build": "tsc"
+  },
+  "publishConfig": {
+    "access": "public",
+    "branches": [
+      "master"
+    ]
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/jest-expect-message": "^1.0.3",
+    "@types/node": "^14.14.25",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^4.3.8",
+    "jest": "^26.4.2",
+    "jest-expect-message": "^1.0.2",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "semantic-release": "^17.3.8",
+    "ts-jest": "^26.5.0",
+    "typescript": "^4.1.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts*": [
+      "yarn prettier",
+      "yarn lint",
+      "yarn test"
+    ]
+  },
+  "jest": {
+    "collectCoverage": true,
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "jest-expect-message"
+    ]
+  }
+}
