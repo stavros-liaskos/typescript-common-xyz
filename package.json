@@ -30,7 +30,8 @@
     ]
   },
   "release": {
-    "branches": ["main"]
+    "branches": ["main"],
+    "debug": true
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
